@@ -11,7 +11,7 @@ This project demonstrates the implementation of automatic speech recognition (AS
 
 **Audio Processing with Librosa:** The librosa library is used to load, preprocess, and manage audio data. The audio files are resampled to 16 kHz to meet the model's input requirements.
 
-Real-Time Audio Playback: The project also supports the playback of audio files directly within a Jupyter notebook environment using the IPython.display module.
+**Real-Time Audio Playback:** The project also supports the playback of audio files directly within a Jupyter notebook environment using the IPython.display module.
 
 **Pre-Trained Model:**  The Wav2Vec2 model used here comes pre-trained on large datasets, which allows the system to generate accurate transcriptions with minimal fine-tuning.
 
