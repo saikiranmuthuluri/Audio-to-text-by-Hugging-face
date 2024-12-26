@@ -32,26 +32,26 @@ This project demonstrates the implementation of automatic speech recognition (AS
 
 **Loading the Pre-Trained Model and Tokenizer:**
 
-  The Wav2Vec2Tokenizer is used to process and tokenize the raw audio into a format suitable for the model. It converts the raw audio waveform into a sequence of input tokens that the model can understand.
-  The Wav2Vec2ForCTC model is loaded with pre-trained weights, capable of generating logits, which are the raw predictions of the model.
+    The Wav2Vec2Tokenizer is used to process and tokenize the raw audio into a format suitable for the model. It converts the raw audio waveform into a sequence of input tokens that the model can understand.
+    The Wav2Vec2ForCTC model is loaded with pre-trained weights, capable of generating logits, which are the raw predictions of the model.
   
 **Processing Audio Input:**
 
-  The librosa.load() function loads the audio file from the specified path and resamples it to the required sample rate of 16 kHz.
-  The audio is then tokenized using the Wav2Vec2Tokenizer, converting the waveform into model-compatible input values.
+    The librosa.load() function loads the audio file from the specified path and resamples it to the required sample rate of 16 kHz.
+    The audio is then tokenized using the Wav2Vec2Tokenizer, converting the waveform into model-compatible input values.
 
 **Running the Model:**
 
-  The model predicts the speech transcription using the tokenized audio data. The output logits represent the probability distribution for each potential token (e.g., phonemes or words).
-  We apply the argmax function to find the token with the highest probability at each time step, which corresponds to the most likely transcription.
+    The model predicts the speech transcription using the tokenized audio data. The output logits represent the probability distribution for each potential token (e.g., phonemes or words).
+    We apply the argmax function to find the token with the highest probability at each time step, which corresponds to the most likely transcription.
 
 **Decoding and Transcription:**
 
-  The predicted tokens are decoded back into readable text using the tokenizer’s decode() function.
+    The predicted tokens are decoded back into readable text using the tokenizer’s decode() function.
 
 **Displaying and Playing Audio:**
 
-  The IPython.display.Audio() function is used to play the audio directly in a Jupyter notebook environment, enabling a seamless audio transcription experience.
+    The IPython.display.Audio() function is used to play the audio directly in a Jupyter notebook environment, enabling a seamless audio transcription experience.
 
 
 
